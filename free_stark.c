@@ -13,5 +13,5 @@ void free_stark(stack_t **stark, unsigned int line_num)
 	if (stark == NULL)
 		return;
 	while (*stark != NULL)
-		_pop(stark, line_num);
+		pop(stark, line_num);
 }
