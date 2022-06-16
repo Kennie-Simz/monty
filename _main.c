@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		printf("USAGE: monty file\n");
+		printf("usage: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	file = fopen(argv[1], "r");
@@ -42,8 +42,8 @@ int main(int argc, char **argv)
 	}
 	fclose(file);
 	free(buff);
-/*	if (stark != NULL) */
-/*		free_stark(&stark, line_num); */
+	if (stark != NULL)
+		free_stark(&stark, line_num);
 	return (EXIT_SUCCESS);
 }
 
@@ -69,8 +69,8 @@ void _tokenize(char *string, stack_t **stark, unsigned int line_num)
 		token = strtok(NULL, " ");
 		if (!check_digit(token))
 		{
-			printf("L%d: Usage: push integer\n", line_num);
-/*			free_stark(stark, line_num); */
+			printf("L%d: push integer\n", line_num);
+			free_stark(stark, line_num);
 			exit(EXIT_FAILURE);
 		}
 		variables.holder = atoi(token);
@@ -83,19 +83,19 @@ void _tokenize(char *string, stack_t **stark, unsigned int line_num)
 /**
  * check_digit - checks if string is a number
  * @token: string to check
- * Return: 0 on success, 1 on failure
+ * Return:  on success, 1 on failure
  *
  **/
 int check_digit(char *token)
 {
 	if (token == NULL)
-		return (1);
+		return (0);
 	if (*token == '-')
 		token++;
 	while (*token != '\0')
 	{
 		if (!isdigit(*token))
-			return (1);
+			return (0);
 		token++;
 	}
 	token++;

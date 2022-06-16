@@ -35,7 +35,7 @@ void _opcode(char *token, stack_t **stark, unsigned int line_num)
 		a++;
 	}
 	printf("L%d: unknown instruction %s\n", line_num, token);
-/*	free_stark(stark, line_num); */
+	free_stark(stark, line_num);
 	exit(EXIT_FAILURE);
 }
 
