@@ -1,14 +1,14 @@
 #include "monty.h"
 
 /**
- * _pop -function to pop the top of stack
+ * pop -function to pop the top of stack
  * @stark: top of stack
  * @line_num: line number
  * Return: void
  *
  **/
 
-void _pop(stack_t **stark, unsigned int line_num)
+void pop(stack_t **stark, unsigned int line_num)
 {
 	if (stark == NULL || *stark == NULL)
 	{

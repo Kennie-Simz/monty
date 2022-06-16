@@ -65,6 +65,7 @@ void free_stark(stack_t **stark, unsigned int line_num);
 void _opcode(char *token, stack_t **stark, unsigned int line_num);
 void push(stack_t **stark, unsigned int line_num);
 void pall(stack_t **stark, unsigned int line_num);
-void _pop(stack_t **stark, unsigned int line_num);
+void pop(stack_t **stark, unsigned int line_num);
+void pint(stack_t **stark, unsigned int line_num);
 
 #endif /* MONTY */

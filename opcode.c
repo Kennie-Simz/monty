@@ -16,6 +16,7 @@ void _opcode(char *token, stack_t **stark, unsigned int line_num)
 	instruction_t op[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
 		{NULL, NULL}
 	};
 
