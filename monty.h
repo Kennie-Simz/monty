@@ -69,5 +69,6 @@ void pop(stack_t **stark, unsigned int line_num);
 void pint(stack_t **stark, unsigned int line_num);
 void nop(stack_t **stark, unsigned int line_num);
 void swap(stack_t **stark, unsigned int line_num);
+void add(stack_t **stark, unsigned int line_num);
 
 #endif /* MONTY */
