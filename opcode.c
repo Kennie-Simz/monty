@@ -19,6 +19,7 @@ void _opcode(char *token, stack_t **stark, unsigned int line_num)
 		{"pint", pint},
 		{"pop", pop},
 		{"nop", nop},
+		{"swap", swap},
 		{NULL, NULL}
 	};
 
