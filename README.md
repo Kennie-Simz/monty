@@ -22,6 +22,11 @@ Files containing Monty byte codes usually have the .m extension. Most of the ind
 - Output printed on: ```stdout```.
 - Error messages printed on ```stderr```.
 
+## Tasks
+- 0. Push, Pall: ```push``` and ```pall``` opcodes
+	- ***The Push Opcode*** : Pushes an element to the stack
+	- ***The Pall Opcode*** : Prints all the values on the stack, starting from the top of the stack.
+
 
 #### Authors
 - Yvonne Gachara: https://github.com/Vonleo
