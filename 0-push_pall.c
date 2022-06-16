@@ -3,7 +3,7 @@
 /**
  * push - pushes an element to the stack
  * @stark: top of stack
- * @linenum: line number for the passed token
+ * @line_num: line number for the passed token
  * Return: void
  *
  **/

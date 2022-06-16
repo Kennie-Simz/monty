@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 		printf("Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	
+
 	while (getline(&buff, &s, file) != -1)
 	{
 		if (*buff != '\n')
@@ -42,9 +42,9 @@ int main(int argc, char **argv)
 	}
 	fclose(file);
 	free(buff);
-/*	if (stark != NULL)
-		free_stark(&stark, line_num); */
-	return(EXIT_SUCCESS);
+/*	if (stark != NULL) */
+/*		free_stark(&stark, line_num); */
+	return (EXIT_SUCCESS);
 }
 
 /**
@@ -60,7 +60,7 @@ void _tokenize(char *string, stack_t **stark, unsigned int line_num)
 	char *token;
 	char *tokens;
 
-	token =strtok(string, " ");
+	token = strtok(string, " ");
 	if (token == NULL || *token == ' ' || *token == '\n' || *token == '#')
 		return;
 	if (strcmp(token, "push") == 0)

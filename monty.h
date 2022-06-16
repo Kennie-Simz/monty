@@ -12,6 +12,12 @@
 #include <string.h>
 #include <ctype.h>
 
+/**
+ * struct var - global variable representation
+ * @holder: unassigned memory holder
+ * @check: checks for the element to be assigned
+ *
+ **/
 typedef struct var
 {
 	int holder;
@@ -52,20 +58,6 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-
-/**
- * free_stark - function to free the stack
- * @stark: the stack
- * @line_num: line number
- * Return: void
- **/
-/* void free_stark(stack_t **stark, unsigned int line_num)
-{
-	if (stark == NULL)
-		return;
-	while (*stark != NULL)
-		pop(stark, line_num);
-} */
 
 int check_digit(char *token);
 void _tokenize(char *string, stack_t **stark, unsigned int line_num);
