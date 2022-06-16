@@ -22,7 +22,7 @@ void push(stack_t **stark, unsigned int line_num)
 	if (new == NULL)
 	{
 		printf("Error: malloc failed\n");
-/*		free_stark(stark, line_num); */
+		free_stark(stark, line_num);
 		exit(EXIT_FAILURE);
 	}
 	new->n = variables.holder;
