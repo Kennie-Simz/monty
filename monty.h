@@ -71,6 +71,6 @@ void nop(stack_t **stark, unsigned int line_num);
 void swap(stack_t **stark, unsigned int line_num);
 void add(stack_t **stark, unsigned int line_num);
 void sub(stack_t **stark, unsigned int line_num);
-
+void _div(stack_t **stark, unsigned int line_num);
 
 #endif /* MONTY */

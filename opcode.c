@@ -22,6 +22,7 @@ void _opcode(char *token, stack_t **stark, unsigned int line_num)
 		{"swap", swap},
 		{"add", add},
 		{"sub", sub},
+		{"div", _div},
 		{NULL, NULL}
 	};
 
