@@ -2,6 +2,7 @@
 #define _MONTY_H_
 
 #define _POSIX_C_SOURCE 200809L
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -72,5 +73,12 @@ void swap(stack_t **stark, unsigned int line_num);
 void add(stack_t **stark, unsigned int line_num);
 void sub(stack_t **stark, unsigned int line_num);
 void _div(stack_t **stark, unsigned int line_num);
+void mul(stack_t **stark, unsigned int line_num);
+void mod(stack_t **stark, unsigned int line_num);
+void pchar(stack_t **stark, unsigned int line_num);
+void pstr(stack_t **stark, __attribute__((unused)) unsigned int line_num);
+void rotl(stack_t **stark, __attribute__((unused))unsigned int linenum);
+void rotr(stack_t **stark, __attribute__((unused))unsigned int linenum);
+void _queue(stack_t **stark, unsigned int line_num);
 
 #endif /* MONTY */

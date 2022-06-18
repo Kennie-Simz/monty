@@ -23,12 +23,29 @@ void _opcode(char *token, stack_t **stark, unsigned int line_num)
 		{"add", add},
 		{"sub", sub},
 		{"div", _div},
+		{"mul", mul},
+		{"mod", mod},
+		{"pchar", pchar},
+		{"pstr", pstr},
+		{"rotl", rotl},
+		{"rotr", rotr},
 		{NULL, NULL}
 	};
 
 	if (strcmp(token, "stack") == 0)
 	{
 		variables.check = 0;
+		return;
+	}
+	if (strcmp(token, "queue") == 0)
+	{
+		variables.check = 1;
+		return;
+	}
+
+	if (variables.check == 1 && strcmp(token, "push") == 0)
+	{
+		_queue(stark, line_num);
 		return;
 	}
 
